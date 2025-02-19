@@ -16,9 +16,8 @@ const Hero = () => {
         className="banner-three-carousel"
       >
         <SwiperSlide>
-          <div className="slide-item">
+          <div className="page-title slide-item">
             <div className="bg-image">
-              <div className="overlay"></div>
               <Image
                 src="/images/main-slider/3.jpg"
                 alt="Warm Touch Homes Banner"
@@ -32,10 +31,21 @@ const Hero = () => {
                 }}
                 priority
               />
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "rgba(0, 0, 0, 0.7)",
+                  zIndex: 1,
+                }}
+              ></div>
             </div>
             <div className="auto-container text-center">
               <div className="content-box">
-                {/* <h1 className="title animate-1">WARM TOUCH HOMES</h1> */}
+                <h1 className="sub-title animate-1">WARM TOUCH HOMES</h1>
                 <span className="sub-title animate-1">
                   Where Care and Comfort Meet Together
                 </span>
