@@ -145,8 +145,8 @@ const Header = () => {
                 <Image
                   src="/images/logo.png"
                   alt="Oitech"
-                  width={150}
-                  height={150}
+                  width={200}
+                  height={200}
                 />
               </Link>
             </div>
@@ -260,7 +260,38 @@ const Header = () => {
             <div className="nav-outer">
               <nav className="main-menu">
                 <div className="navbar-collapse show collapse clearfix">
-                  <ul className="navigation clearfix"></ul>
+                  <ul className="navigation clearfix">
+                    <ul className="navigation">
+                      <li>
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li>
+                        <Link href="/about">About</Link>
+                      </li>
+                      <li className="dropdown">
+                        <Link href="/services">Services</Link>
+                        <ul>
+                          {servicesData.map((service) => (
+                            <li key={service.id}>
+                              <Link
+                                href={`/services/${service.title
+                                  .toLowerCase()
+                                  .replace(/\s+/g, "-")}`}
+                              >
+                                {service.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                      <li>
+                        <Link href="/gallery">Gallery</Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">Contact Us</Link>
+                      </li>
+                    </ul>
+                  </ul>
                 </div>
               </nav>
               <div className="mobile-nav-toggler" onClick={toggleMobileMenu}>
