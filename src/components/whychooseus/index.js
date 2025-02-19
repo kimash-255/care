@@ -91,17 +91,43 @@ const WhyChooseUs = () => {
           <div className="image-column col-xl-6 col-lg-5 col-md-12 col-sm-12">
             <div className="image-box wow fadeInRight">
               <figure className="image overlay-anim">
-                <Image
+                <img
                   src="/images/resource/why-us-3.jpg"
                   alt="Warm Touch Homes"
-                  width={500}
-                  height={500}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    objectFit: "cover",
+                  }}
                 />
               </figure>
             </div>
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .image-box {
+          max-width: 100%;
+          overflow: hidden;
+        }
+
+        .image {
+          max-width: 100%;
+          overflow: hidden;
+          margin: 0;
+        }
+
+        .image img {
+          display: block;
+          width: 100%;
+        }
+
+        @media (max-width: 768px) {
+          .image-box {
+            margin: 20px 0;
+          }
+        }
+      `}</style>
     </section>
   );
 };

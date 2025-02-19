@@ -13,10 +13,7 @@ const Cta = () => {
             Compassionate Care, Trusted Support. <br />
             Enhancing Lives with Every Step.
           </h1>
-          <Link
-            href="/services"
-            className="theme-btn btn-style-one hvr-light"
-          >
+          <Link href="/services" className="theme-btn btn-style-one hvr-light">
             <span className="btn-title">Explore Our Services</span>
           </Link>
         </div>

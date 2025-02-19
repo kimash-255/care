@@ -15,25 +15,30 @@ const Hero = () => {
         modules={[Navigation]}
         className="banner-three-carousel"
       >
-        {/* Slide Item */}
         <SwiperSlide>
-          <div className="slide-item relative">
-            <div className="absolute inset-0 -z-10">
+          <div className="slide-item">
+            <div className="bg-image">
               <Image
                 src="/images/main-slider/3.jpg"
                 alt="Warm Touch Homes Banner"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  maxWidth: "100%",
+                  width: "100%",
+                  height: "100%",
+                }}
                 priority
               />
             </div>
             <div className="auto-container text-center">
               <div className="content-box">
-                <h1 className="title animate-1 ">WARM TOUCH HOMES</h1>
-                <span className="sub-title animate-1 ">
+                <h1 className="title animate-1">WARM TOUCH HOMES</h1>
+                <span className="sub-title animate-1">
                   Where Care and Comfort Meet Together
                 </span>
-                <div className="btn-box animate-2 justify-center">
+                <div className="btn-box animate-2">
                   <Link
                     href="/page-about"
                     className="theme-btn btn-style-one hover-light text-black"
@@ -46,6 +51,41 @@ const Hero = () => {
           </div>
         </SwiperSlide>
       </Swiper>
+
+      <style jsx>{`
+        .banner-section-three {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          max-width: 100vw;
+        }
+
+        .slide-item {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          min-height: 600px;
+        }
+
+        .bg-image {
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+        }
+
+        .content-box {
+          position: relative;
+          z-index: 1;
+          padding: 120px 0;
+        }
+
+        @media (max-width: 768px) {
+          .slide-item {
+            height: 80vh;
+            min-height: 400px;
+          }
+        }
+      `}</style>
     </section>
   );
 };

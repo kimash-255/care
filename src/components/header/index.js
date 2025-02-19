@@ -13,12 +13,23 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsSticky(true);
+      if (window.innerWidth > 768) {
+        // Only change sticky state on desktop
+        if (window.scrollY > 100) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
       } else {
-        setIsSticky(false);
+        // Always sticky on mobile
+        setIsSticky(true);
       }
     };
+
+    // Set initial state for mobile
+    if (window.innerWidth <= 768) {
+      setIsSticky(true);
+    }
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -89,8 +100,8 @@ const Header = () => {
                   <Image
                     src="/images/logo.png"
                     alt="Warm Touch Homes Logo"
-                    width={160}
-                    height={160}
+                    width={260}
+                    height={260}
                     priority
                   />
                 </Link>
@@ -145,8 +156,8 @@ const Header = () => {
                 <Image
                   src="/images/logo.png"
                   alt="Oitech"
-                  width={200}
-                  height={200}
+                  width={100}
+                  height={250}
                 />
               </Link>
             </div>
@@ -245,13 +256,13 @@ const Header = () => {
       <div className={`sticky-header ${isSticky ? "fixed-header" : ""}`}>
         <div className="auto-container">
           <div className="inner-container">
-            <div className="logo bg-white p-2 rounded-lg">
+            <div className="logo">
               <Link href="/">
                 <Image
-                  src="/images/logo-2.png"
+                  src="/images/logo.png"
                   alt="Warm Touch Homes Logo"
-                  width={150}
-                  height={150}
+                  width={100}
+                  height={250}
                   priority
                 />
               </Link>
@@ -259,40 +270,23 @@ const Header = () => {
 
             <div className="nav-outer">
               <nav className="main-menu">
-                <div className="navbar-collapse show collapse clearfix">
-                  <ul className="navigation clearfix">
-                    <ul className="navigation">
-                      <li>
-                        <Link href="/">Home</Link>
-                      </li>
-                      <li>
-                        <Link href="/about">About</Link>
-                      </li>
-                      <li className="dropdown">
-                        <Link href="/services">Services</Link>
-                        <ul>
-                          {servicesData.map((service) => (
-                            <li key={service.id}>
-                              <Link
-                                href={`/services/${service.title
-                                  .toLowerCase()
-                                  .replace(/\s+/g, "-")}`}
-                              >
-                                {service.title}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                      <li>
-                        <Link href="/gallery">Gallery</Link>
-                      </li>
-                      <li>
-                        <Link href="/contact">Contact Us</Link>
-                      </li>
-                    </ul>
-                  </ul>
-                </div>
+                <ul className="navigation">
+                  <li>
+                    <Link href="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link href="/about">About</Link>
+                  </li>
+                  <li>
+                    <Link href="/services">Services</Link>
+                  </li>
+                  <li>
+                    <Link href="/gallery">Gallery</Link>
+                  </li>
+                  <li>
+                    <Link href="/contact">Contact</Link>
+                  </li>
+                </ul>
               </nav>
               <div className="mobile-nav-toggler" onClick={toggleMobileMenu}>
                 <span className="lnr-icon-bars"></span>
@@ -306,7 +300,7 @@ const Header = () => {
         @media (max-width: 768px) {
           .header-top,
           .header-lower {
-            display: none; /* Hides the regular header on mobile */
+            display: none;
           }
 
           .sticky-header {
@@ -318,8 +312,41 @@ const Header = () => {
             background: white;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            transition: all 0.3s ease-in-out;
             padding: 10px 0;
+          }
+
+          .sticky-header .inner-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 5px 15px;
+            min-height: 80px;
+          }
+
+          .sticky-header .logo {
+            max-width: 120px;
+            height: auto;
+            padding: 5px 0;
+          }
+
+          .sticky-header .navigation {
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+
+          .sticky-header .navigation li a {
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+          }
+
+          /* Add margin to main content to prevent overlap with fixed header */
+          body {
+            padding-top: 80px;
           }
         }
       `}</style>

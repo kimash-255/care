@@ -19,8 +19,12 @@ const Footer = () => {
                   <Image
                     src="/images/logo.png"
                     alt="Logo"
-                    width={150}
-                    height={50}
+                    width={80}
+                    height={80}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                 </Link>
               </div>
@@ -160,6 +164,26 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .logo {
+          max-width: 100%;
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+        }
+
+        .logo a {
+          display: block;
+          max-width: 80px;
+        }
+
+        @media (max-width: 768px) {
+          .logo a {
+            max-width: 80px;
+          }
+        }
+      `}</style>
     </footer>
   );
 };

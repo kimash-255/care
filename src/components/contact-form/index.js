@@ -59,7 +59,15 @@ const ContactForm = () => {
               </div>
 
               <figure className="image overlay-anim">
-                <img src="/images/resource/contact.jpg" alt="Contact" />
+                <img
+                  src="/images/resource/contact.jpg"
+                  alt="Contact"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    display: "block",
+                  }}
+                />
               </figure>
 
               <div className="info-box">
@@ -153,6 +161,24 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .image {
+          max-width: 100%;
+          overflow: hidden;
+          margin: 0;
+        }
+
+        .contact-section-two {
+          overflow: hidden;
+          width: 100%;
+        }
+
+        @media (max-width: 768px) {
+          .image {
+            margin: 20px 0;
+          }
+        }
+      `}</style>
     </section>
   );
 };
