@@ -18,6 +18,7 @@ const Hero = () => {
         <SwiperSlide>
           <div className="slide-item">
             <div className="bg-image">
+              <div className="overlay"></div>
               <Image
                 src="/images/main-slider/3.jpg"
                 alt="Warm Touch Homes Banner"
@@ -40,7 +41,7 @@ const Hero = () => {
                 </span>
                 <div className="btn-box animate-2">
                   <Link
-                    href="/page-about"
+                    href="/about"
                     className="theme-btn btn-style-one hover-light text-black"
                   >
                     <span className="btn-title">Read More</span>
@@ -73,10 +74,30 @@ const Hero = () => {
           z-index: -1;
         }
 
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+          z-index: 1;
+        }
+
         .content-box {
           position: relative;
-          z-index: 1;
+          z-index: 2; /* Increased z-index to appear above overlay */
           padding: 120px 0;
+        }
+
+        .title {
+          color: #ffffff; /* Ensure text is white */
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow */
+        }
+
+        .sub-title {
+          color: #ffffff;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         @media (max-width: 768px) {

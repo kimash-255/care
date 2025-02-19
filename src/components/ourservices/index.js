@@ -20,35 +20,46 @@ const OurServices = () => {
               key={service.id}
               className="service-block-two col-lg-3 col-md-6 wow fadeInUp"
             >
-              <div className="inner-box">
-                <div className="image-box">
-                  <figure className="image">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      width={300}
-                      height={200}
-                    />
-                  </figure>
+              <Link href={`/services/${service.slug}`}>
+                <div className="inner-box">
+                  <div className="image-box">
+                    <figure className="image">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        width={300}
+                        height={200}
+                      />
+                    </figure>
+                  </div>
+                  <div className="content-box">
+                    <i className={`icon ${service.icon}`}></i>
+                    <h5 className="title">{service.title}</h5>
+                  </div>
+                  <div className="hover-content">
+                    <i className={`icon ${service.icon}`}></i>
+                    <h5 className="title">{service.title}</h5>
+                    <div className="text">{service.description}</div>
+                  </div>
                 </div>
-                <div className="content-box">
-                  <i className={`icon ${service.icon}`}></i>
-                  <h5 className="title">{service.title}</h5>
-                </div>
-                <div className="hover-content">
-                  <i className={`icon ${service.icon}`}></i>
-                  <h5 className="title">
-                    <Link href={`/services/${service.slug}`}>
-                      {service.title}
-                    </Link>
-                  </h5>
-                  <div className="text">{service.description}</div>
-                </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        .service-block-two a {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+          height: 100%;
+        }
+
+        .service-block-two:hover {
+          cursor: pointer;
+        }
+      `}</style>
     </section>
   );
 };
