@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import servicesData from "@/data/servicesdata";
 
 const Header = () => {
   return (
@@ -84,12 +85,17 @@ const Header = () => {
                   <li className="dropdown">
                     <Link href="#">Services</Link>
                     <ul>
-                      <li>
-                        <Link href="/services">Services List</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/details">Service Details</Link>
-                      </li>
+                      {servicesData.map((service) => (
+                        <li key={service.id}>
+                          <Link
+                            href={`/services/${service.title
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}`}
+                          >
+                            {service.title}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
 

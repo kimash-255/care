@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import servicesData from "@/data/servicesdata";
+import Layout from "@/components/layout";
 
 const ServiceDetails = () => {
   const router = useRouter();
@@ -17,7 +18,7 @@ const ServiceDetails = () => {
   }
 
   return (
-    <>
+    <Layout>
       {/* Page Title Section */}
       <section
         className="page-title"
@@ -184,7 +185,7 @@ const ServiceDetails = () => {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   );
 };
 
