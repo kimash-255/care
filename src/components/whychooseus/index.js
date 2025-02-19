@@ -1,87 +1,83 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const WhyChooseUs = () => {
+  useEffect(() => {
+    // Animate Progress Bars
+    const progressBars = document.querySelectorAll(".progress-line");
+    progressBars.forEach((bar) => {
+      const width = bar.getAttribute("data-width");
+      bar.style.width = width + "%";
+    });
+  }, []);
+
   return (
-    <section class="why-choose-us-two pt-0">
-      <div class="auto-container">
-        <div class="row">
+    <section className="why-choose-us-two pt-0">
+      <div className="auto-container">
+        <div className="row">
+          {/* Content Column */}
           <div
-            class="content-column col-xl-6 col-lg-7 col-md-12 col-sm-12 wow fadeInLeft"
+            className="content-column col-xl-6 col-lg-7 col-md-12 col-sm-12 wow fadeInLeft"
             data-wow-delay="600ms"
           >
-            <div class="inner-column">
-              <div class="sec-title">
-                <span class="sub-title">why choose our company</span>
-                <h2 class="text-split">Why you Should Choose Our Services?</h2>
-                <div class="text">
-                  There are many variations of passages of but the majority have
-                  in some form, by injected humou or words which don't look even
-                  slightly believable of but the majority have suffered.
+            <div className="inner-column">
+              <div className="sec-title">
+                <span className="sub-title">Why Warm Touch Homes?</span>
+                <h2 className="text-split">
+                  Exceptional Care with a Personal Touch
+                </h2>
+                <div className="text">
+                  At Warm Touch Homes, we believe in creating a **safe, loving,
+                  and enriching environment** where seniors can thrive. Our
+                  holistic approach to senior living ensures **comfort, dignity,
+                  and joy** for every resident.
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                  <div class="info-box">
-                    <i class="icon fa fa-check-circle"></i>
-                    <h6 class="title">Safety Guaranty</h6>
+              <div className="row">
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="info-box">
+                    <i className="icon fa fa-check-circle"></i>
+                    <h6 className="title">24/7 Compassionate Care</h6>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                  <div class="info-box">
-                    <i class="icon fa fa-check-circle"></i>
-                    <h6 class="title">Medical Support</h6>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="info-box">
+                    <i className="icon fa fa-check-circle"></i>
+                    <h6 className="title">Personalized Wellness Plans</h6>
                   </div>
                 </div>
               </div>
 
-              {/* <!--Skills--> */}
-              <div class="skills">
-                {/* <!--Skill Item--> */}
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <h6 class="skill-title">Medical Care</h6>
+              {/* Skills Section */}
+              <div className="skills">
+                {/* Skill Item - Medical Care */}
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <h6 className="skill-title">Comprehensive Medical Care</h6>
                   </div>
-                  <div class="skill-bar">
-                    <div class="bar-inner">
-                      <div class="bar progress-line" data-width="86">
-                        <div class="skill-percentage">
-                          <div class="count-box">
-                            <span
-                              class="count-text"
-                              data-speed="3000"
-                              data-stop="86"
-                            >
-                              0
-                            </span>
-                            %
-                          </div>
+                  <div className="skill-bar">
+                    <div className="bar-inner">
+                      <div className="bar progress-line" data-width="95">
+                        <div className="skill-percentage">
+                          <span className="count-text">95%</span>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* <!--Skill Item--> */}
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <h6 class="skill-title">Independent</h6>
+                {/* Skill Item - Independent Living */}
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <h6 className="skill-title">Promoting Independence</h6>
                   </div>
-                  <div class="skill-bar">
-                    <div class="bar-inner">
-                      <div class="bar progress-line" data-width="77">
-                        <div class="skill-percentage">
-                          <div class="count-box">
-                            <span
-                              class="count-text"
-                              data-speed="3000"
-                              data-stop="77"
-                            >
-                              0
-                            </span>
-                            %
-                          </div>
+                  <div className="skill-bar">
+                    <div className="bar-inner">
+                      <div className="bar progress-line" data-width="88">
+                        <div className="skill-percentage">
+                          <span className="count-text">88%</span>
                         </div>
                       </div>
                     </div>
@@ -91,17 +87,16 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          {/* <!-- Image Column --> */}
-          <div class="image-column col-xl-6 col-lg-5 col-md-12 col-sm-12">
-            <div class="image-box wow fadeInRight">
-              <figure class="image overlay-anim">
-                <img src="images/resource/why-us-3.jpg" alt="" />
-                <a
-                  href="https://www.youtube.com/watch?v=Fvae8nxzVz4"
-                  class="play-btn lightbox-image"
-                >
-                  <i class="icon fa fa-play"></i>
-                </a>
+          {/* Image Column */}
+          <div className="image-column col-xl-6 col-lg-5 col-md-12 col-sm-12">
+            <div className="image-box wow fadeInRight">
+              <figure className="image overlay-anim">
+                <Image
+                  src="/images/resource/why-us-3.jpg"
+                  alt="Warm Touch Homes"
+                  width={500}
+                  height={500}
+                />
               </figure>
             </div>
           </div>
@@ -110,4 +105,5 @@ const WhyChooseUs = () => {
     </section>
   );
 };
+
 export default WhyChooseUs;

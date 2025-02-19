@@ -10,14 +10,14 @@ const Cta = () => {
       <div className="auto-container">
         <div className="title-box wow fadeInUp">
           <h1 className="title">
-            Our mission is to provide accurate <br />
-            and timely medical.
+            Compassionate Care, Trusted Support. <br />
+            Enhancing Lives with Every Step.
           </h1>
           <Link
-            href="page-services.html"
+            href="/services"
             className="theme-btn btn-style-one hvr-light"
           >
-            <span className="btn-title">Discover more</span>
+            <span className="btn-title">Explore Our Services</span>
           </Link>
         </div>
       </div>

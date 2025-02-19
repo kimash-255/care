@@ -1,152 +1,101 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const projectGalleryData = [
+  {
+    id: 1,
+    title: "Senior Citizen Care",
+    slug: "senior-citizen-care",
+    image: "/images/resource/project-1.jpg",
+    category: "Elderly Nutrition",
+  },
+  {
+    id: 2,
+    title: "Residential Care",
+    slug: "residential-care",
+    image: "/images/resource/project-2.jpg",
+    category: "Senior Citizen",
+  },
+  {
+    id: 3,
+    title: "Medical Checkup",
+    slug: "medical-checkup",
+    image: "/images/resource/project-3.jpg",
+    category: "Home Care",
+  },
+  {
+    id: 4,
+    title: "Personalized Care",
+    slug: "personalized-care",
+    image: "/images/resource/project-4.jpg",
+    category: "Quality Support",
+  },
+];
+
 const ProjectGallery = () => {
   return (
-    <section class="project-section-two">
-      <div class="auto-container">
-        <div class="sec-title light">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <span class="sub-title">Cases Gallery</span>
-              <h2 class="text-split">
-                Our beautiful portfolio <br class="d-none d-sm-block" />
-                cases gallery
+    <section className="project-section-two">
+      <div className="auto-container">
+        <div className="sec-title light">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <span className="sub-title">Our Work</span>
+              <h2 className="text-split">
+                A glimpse into <br className="d-none d-sm-block" />
+                our compassionate care
               </h2>
             </div>
-            <div class="col-lg-6 btn-box">
-              <div class="text">
-                There are many variations of passages of available but the
-                majority have suffered alteration in some form, by injected hum
-                randomised words which don't slightly but the majority have
-                suffered
+            <div className="col-lg-6 btn-box">
+              <div className="text">
+                At Warm Touch Homes, we take pride in delivering exceptional
+                senior care services. From personalized wellness plans to
+                enriching social activities, our portfolio showcases the
+                heartfelt commitment we bring to every resident’s life.
               </div>
             </div>
           </div>
         </div>
 
-        <div class="carousel-outer">
-          {/* <!-- Prject Carousel --> */}
-          <div class="project-carousel-three owl-carousel owl-theme">
-            {/* <!-- Project Block Three--> */}
-            <div class="project-block">
-              <div class="inner-box">
-                <div class="image-box">
-                  <div class="image">
-                    <img
-                      src="images/resource/project-1.jpg"
-                      class="img-fullwidth"
-                      alt=""
-                    />
+        <div className="carousel-outer">
+          <div className="project-carousel-three owl-carousel owl-theme">
+            {projectGalleryData.map((project) => (
+              <div className="project-block" key={project.id}>
+                <div className="inner-box">
+                  <div className="image-box">
+                    <div className="image">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        className="img-fullwidth"
+                        width={400}
+                        height={300}
+                      />
+                    </div>
+                  </div>
+                  <div className="content-box">
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="theme-btn read-more"
+                    >
+                      <i className="lnr-icon-arrow-right1"></i>
+                    </Link>
+                    <h4 className="title">
+                      <Link href={`/projects/${project.slug}`}>
+                        {project.title}
+                      </Link>
+                    </h4>
+                    <ul className="cat-list">
+                      <li>{project.category}</li>
+                    </ul>
                   </div>
                 </div>
-                <div class="content-box">
-                  <a
-                    href="page-project-details.html"
-                    class="theme-btn read-more"
-                  >
-                    <i class="lnr-icon-arrow-right1"></i>
-                  </a>
-                  <h4 class="title">
-                    <a href="page-project-details.html">Senior Citizen Care</a>
-                  </h4>
-                  <ul class="cat-list">
-                    <li>Elderly Nutrition</li>
-                  </ul>
-                </div>
               </div>
-            </div>
-
-            {/* <!-- Project Block Three--> */}
-            <div class="project-block">
-              <div class="inner-box">
-                <div class="image-box">
-                  <div class="image">
-                    <img
-                      src="images/resource/project-2.jpg"
-                      class="img-fullwidth"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="content-box">
-                  <a
-                    href="page-project-details.html"
-                    class="theme-btn read-more"
-                  >
-                    <i class="lnr-icon-arrow-right1"></i>
-                  </a>
-                  <h4 class="title">
-                    <a href="page-project-details.html">Residential Care</a>
-                  </h4>
-                  <ul class="cat-list">
-                    <li>Senior Citizen</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Project Block Three--> */}
-            <div class="project-block">
-              <div class="inner-box">
-                <div class="image-box">
-                  <div class="image">
-                    <img
-                      src="images/resource/project-3.jpg"
-                      class="img-fullwidth"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="content-box">
-                  <a
-                    href="page-project-details.html"
-                    class="theme-btn read-more"
-                  >
-                    <i class="lnr-icon-arrow-right1"></i>
-                  </a>
-                  <h4 class="title">
-                    <a href="page-project-details.html">Medical Checkup</a>
-                  </h4>
-                  <ul class="cat-list">
-                    <li>Provide Home</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Project Block Three--> */}
-            <div class="project-block">
-              <div class="inner-box">
-                <div class="image-box">
-                  <div class="image">
-                    <img
-                      src="images/resource/project-4.jpg"
-                      class="img-fullwidth"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="content-box">
-                  <a
-                    href="page-project-details.html"
-                    class="theme-btn read-more"
-                  >
-                    <i class="lnr-icon-arrow-right1"></i>
-                  </a>
-                  <h4 class="title">
-                    <a href="page-project-details.html">Personalized Care</a>
-                  </h4>
-                  <ul class="cat-list">
-                    <li>Quality Food</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 export default ProjectGallery;

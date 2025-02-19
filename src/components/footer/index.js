@@ -63,6 +63,9 @@ const Footer = () => {
                       We provide exceptional home care services, ensuring
                       comfort & well-being.
                     </div>
+                    <Link href="/about" className="footer-link">
+                      Learn More
+                    </Link>
                   </div>
                 </div>
                 <div className="col-xl-5 col-lg-6 col-md-6">
@@ -72,7 +75,6 @@ const Footer = () => {
                       <li>
                         <Link href="/services">What We Do</Link>
                       </li>
-
                       <li>
                         <Link href="/contact">Contact</Link>
                       </li>
