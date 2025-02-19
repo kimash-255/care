@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <script async src="js/jquery.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
         <link href="css/responsive.css" rel="stylesheet" />
@@ -24,7 +25,7 @@ export default function Document() {
           data-cfasync="false"
           src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
         ></script>
-        <script async src="js/jquery.js"></script>
+
         <script async src="js/popper.min.js"></script>
         <script async src="js/bootstrap.min.js"></script>
         <script async src="js/jquery.fancybox.js"></script>

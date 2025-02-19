@@ -3,53 +3,47 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <header class="main-header header-style-three">
+    <header className="main-header header-style-three">
       {/* <!-- Header Top --> */}
-      <div class="header-top">
-        <div class="auto-container">
-          <div class="inner-container">
-            <div class="top-left">
-              <ul class="social-icon-one">
+      <div className="header-top">
+        <div className="auto-container">
+          <div className="inner-container">
+            <div className="top-left">
+              <ul className="social-icon-one">
                 <li>
                   <a href="#">
-                    <span class="fa fa-x"></span>
+                    <span className="fa fa-x"></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="fab fa-facebook-square"></span>
+                    <span className="fab fa-facebook-square"></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="fab fa-pinterest-p"></span>
+                    <span className="fab fa-pinterest-p"></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="fab fa-instagram"></span>
+                    <span className="fab fa-instagram"></span>
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div class="top-right">
+            <div className="top-right">
               {/* <!-- Info List --> */}
-              <ul class="list-style-one">
+              <ul className="list-style-one">
                 <li>
-                  <i class="fa fa-envelope"></i>
-                  <a href="/cdn-cgi/l/email-protection#701e15151418151c0030131f1d00111e095e131f1d">
-                    <span
-                      class="__cf_email__"
-                      data-cfemail="58363d3d3c303d3428183b373528393621763b3735"
-                    >
-                      [email&#160;protected]
-                    </span>
+                  <i className="fa fa-envelope"></i>
+                  <a href="mailto:warmtouchhomes@gmail.com">
+                    warmtouchhomes@gmail.com
                   </a>
                 </li>
                 <li>
-                  <i class="fa fa-map-marker"></i> 88 Broklyn Golden Street. New
-                  York
+                  <i className="fa fa-map-marker"></i> 503-747-5544
                 </li>
               </ul>
             </div>
@@ -59,155 +53,54 @@ const Header = () => {
       {/* <!-- Header Top --> */}
 
       {/* <!-- Header Lower --> */}
-      <div class="header-lower">
-        <div class="auto-container">
+      <div className="header-lower">
+        <div className="auto-container">
           {/* <!-- Main box --> */}
-          <div class="main-box">
-            <div class="logo-box">
-              <div class="logo">
-                <a href="index.html">
-                  <img src="images/logo.png" alt="" title="Oitech" />
-                </a>
+          <div className="main-box">
+            <div className="logo-box">
+              <div className="logo">
+                <Link href="/">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Oitech"
+                    width={150}
+                    height={50}
+                  />
+                </Link>
               </div>
             </div>
 
             {/* <!--Nav Box--> */}
-            <div class="nav-outer">
-              <nav class="nav main-menu">
-                <ul class="navigation">
-                  <li class="current dropdown">
-                    <a href="index.html">Home</a>
+            <div className="nav-outer">
+              <nav className="nav main-menu">
+                <ul className="navigation">
+                  <li className="current dropdown">
+                    <Link href="/">Home</Link>
+                  </li>
+
+                  <li className="dropdown">
+                    <Link href="#">Services</Link>
                     <ul>
                       <li>
-                        <a href="index.html">Home page 01</a>
+                        <Link href="/services">Services List</Link>
                       </li>
                       <li>
-                        <a href="index-2.html">Home page 02</a>
-                      </li>
-                      <li>
-                        <a href="index-3.html">Home page 03</a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#">Single Style</a>
-                        <ul>
-                          <li>
-                            <a href="index-1-single.html">Single Style One</a>
-                          </li>
-                          <li>
-                            <a href="index-2-single.html">Single Style Two</a>
-                          </li>
-                          <li>
-                            <a href="index-3-single.html">Single Style Three</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#">Dark Style</a>
-                        <ul>
-                          <li>
-                            <a href="index-1-dark.html">Dark Style One</a>
-                          </li>
-                          <li>
-                            <a href="index-2-dark.html">Dark Style Two</a>
-                          </li>
-                          <li>
-                            <a href="index-3-dark.html">Dark Style Three</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="index-1-rtl.html">RTL Style</a>
+                        <Link href="/services/details">Service Details</Link>
                       </li>
                     </ul>
                   </li>
-                  <li class="dropdown">
-                    <a href="#">Pages</a>
-                    <ul>
-                      <li>
-                        <a href="page-about.html">About</a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#">Packages</a>
-                        <ul>
-                          <li>
-                            <a href="page-projects.html">Packages List</a>
-                          </li>
-                          <li>
-                            <a href="page-project-details.html">
-                              Package Details
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#">Team</a>
-                        <ul>
-                          <li>
-                            <a href="page-team.html">Team List</a>
-                          </li>
-                          <li>
-                            <a href="page-team-details.html">Team Details</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="page-testimonial.html">Testimonial</a>
-                      </li>
-                      <li>
-                        <a href="page-pricing.html">Pricing</a>
-                      </li>
-                      <li>
-                        <a href="page-faq.html">FAQ</a>
-                      </li>
-                      <li>
-                        <a href="page-404.html">Page 404</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#">Services</a>
-                    <ul>
-                      <li>
-                        <a href="page-services.html">Services List</a>
-                      </li>
-                      <li>
-                        <a href="page-service-details.html">Service Details</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#">News</a>
-                    <ul>
-                      <li>
-                        <a href="news-grid.html">News Grid</a>
-                      </li>
-                      <li>
-                        <a href="news-details.html">News Details</a>
-                      </li>
-                    </ul>
-                  </li>
+
+                  {/* Added Gallery Link */}
                   <li>
-                    <a href="page-contact.html">Contact Us</a>
+                    <Link href="/gallery">Gallery</Link>
+                  </li>
+
+                  <li>
+                    <Link href="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </nav>
               {/* <!-- Main Menu End--> */}
-
-              <div class="outer-box">
-                <div class="ui-btn-outer border-0">
-                  <button class="ui-btn ui-btn search-btn">
-                    <span class="icon lnr lnr-icon-search"></span>
-                  </button>
-                  <a href="#" class="ui-btn">
-                    <i class="lnr-icon-shopping-cart"></i>
-                  </a>
-                </div>
-
-                {/* <!-- Mobile Nav toggler --> */}
-                <div class="mobile-nav-toggler">
-                  <span class="icon lnr-icon-bars"></span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -215,78 +108,78 @@ const Header = () => {
       {/* <!-- End Header Lower --> */}
 
       {/* <!-- Mobile Menu  --> */}
-      <div class="mobile-menu">
-        <div class="menu-backdrop"></div>
+      <div className="mobile-menu">
+        <div className="menu-backdrop"></div>
 
         {/* <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> */}
-        <nav class="menu-box">
-          <div class="upper-box">
-            <div class="nav-logo">
-              <a href="index.html">
-                <img src="images/logo.png" alt="" title="" />
-              </a>
+        <nav className="menu-box">
+          <div className="upper-box">
+            <div className="nav-logo">
+              <Link href="/">
+                <Image
+                  src="/images/logo.png"
+                  alt="Oitech"
+                  width={150}
+                  height={50}
+                />
+              </Link>
             </div>
-            <div class="close-btn">
-              <i class="icon fa fa-times"></i>
+            <div className="close-btn">
+              <i className="icon fa fa-times"></i>
             </div>
           </div>
 
-          <ul class="navigation clearfix">
+          <ul className="navigation clearfix">
             {/* <!--Keep This Empty / Menu will come through Javascript--> */}
           </ul>
-          <ul class="contact-list-one">
+          <ul className="contact-list-one">
             <li>
               {/* <!-- Contact Info Box --> */}
-              <div class="contact-info-box">
-                <i class="icon lnr-icon-phone-handset"></i>
-                <span class="title">Call Now</span>
-                <a href="tel:+92880098670">+92 (8800) - 98670</a>
+              <div className="contact-info-box">
+                <i className="icon lnr-icon-phone-handset"></i>
+                <span className="title">Call Now</span>
+                <a href="tel:5037475544">503-747-5544</a>
               </div>
             </li>
             <li>
               {/* <!-- Contact Info Box --> */}
-              <div class="contact-info-box">
-                <span class="icon lnr-icon-envelope1"></span>
-                <span class="title">Send Email</span>
-                <a href="/cdn-cgi/l/email-protection#6f070a031f2f0c00021f0e0116410c0002">
-                  <span
-                    class="__cf_email__"
-                    data-cfemail="82eae7eef2c2e1edeff2e3ecfbace1edef"
-                  >
-                    [email&#160;protected]
-                  </span>
+              <div className="contact-info-box">
+                <span className="icon lnr-icon-envelope1"></span>
+                <span className="title">Send Email</span>
+                <a href="mailto:warmtouchhomes@gmail.com">
+                  warmtouchhomes@gmail.com
                 </a>
               </div>
             </li>
             <li>
               {/* <!-- Contact Info Box --> */}
-              <div class="contact-info-box">
-                <span class="icon lnr-icon-clock"></span>
-                <span class="title">Send Email</span>
+              <div className="contact-info-box">
+                <span className="icon lnr-icon-clock"></span>
+                <span className="title">Business Hours</span>
                 Mon - Sat 8:00 - 6:30, Sunday - CLOSED
               </div>
             </li>
           </ul>
 
-          <ul class="social-links">
+          <ul className="social-links">
             <li>
               <a href="#">
-                <i class="fa fa-x"></i>
+                <i className="fa fa-x"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fab fa-facebook-f"></i>
+                <i className="fab fa-facebook-f"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fab fa-pinterest"></i>
+                <i className="fab fa-pinterest"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
               </a>
             </li>
           </ul>
@@ -295,24 +188,23 @@ const Header = () => {
       {/* <!-- End Mobile Menu --> */}
 
       {/* <!-- Header Search --> */}
-      <div class="search-popup">
-        <span class="search-back-drop"></span>
-        <button class="close-search">
-          <span class="fa fa-times"></span>
+      <div className="search-popup">
+        <span className="search-back-drop"></span>
+        <button className="close-search">
+          <span className="fa fa-times"></span>
         </button>
 
-        <div class="search-inner">
-          <form method="post" action="index.html">
-            <div class="form-group">
+        <div className="search-inner">
+          <form method="post" action="/">
+            <div className="form-group">
               <input
                 type="search"
                 name="search-field"
-                value=""
                 placeholder="Search..."
-                required=""
+                required
               />
               <button type="submit">
-                <i class="fa fa-search"></i>
+                <i className="fa fa-search"></i>
               </button>
             </div>
           </form>
@@ -321,22 +213,27 @@ const Header = () => {
       {/* <!-- End Header Search --> */}
 
       {/* <!-- Sticky Header  --> */}
-      <div class="sticky-header">
-        <div class="auto-container">
-          <div class="inner-container">
+      <div className="sticky-header">
+        <div className="auto-container">
+          <div className="inner-container">
             {/* <!--Logo--> */}
-            <div class="logo">
-              <a href="index.html" title="">
-                <img src="images/logo-2.png" alt="" title="" />
-              </a>
+            <div className="logo">
+              <Link href="/" title="">
+                <Image
+                  src="/images/logo-2.png"
+                  alt="Oitech"
+                  width={150}
+                  height={50}
+                />
+              </Link>
             </div>
 
             {/* <!--Right Col--> */}
-            <div class="nav-outer">
+            <div className="nav-outer">
               {/* <!-- Main Menu --> */}
-              <nav class="main-menu">
-                <div class="navbar-collapse show collapse clearfix">
-                  <ul class="navigation clearfix">
+              <nav className="main-menu">
+                <div className="navbar-collapse show collapse clearfix">
+                  <ul className="navigation clearfix">
                     {/* <!--Keep This Empty / Menu will come through Javascript--> */}
                   </ul>
                 </div>
@@ -344,8 +241,8 @@ const Header = () => {
               {/* <!-- Main Menu End--> */}
 
               {/* <!--Mobile Navigation Toggler--> */}
-              <div class="mobile-nav-toggler">
-                <span class="icon lnr-icon-bars"></span>
+              <div className="mobile-nav-toggler">
+                <span className="icon lnr-icon-bars"></span>
               </div>
             </div>
           </div>
@@ -355,4 +252,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;
