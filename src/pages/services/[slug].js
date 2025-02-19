@@ -74,12 +74,10 @@ const ServiceDetails = () => {
 
                   {/* Contact Section */}
                   <div className="service-details-help">
-                    <h2 className="help-title">
-                      Contact with <br /> us for any <br /> advice
-                    </h2>
+                    <h2 className="help-title">Contact Us</h2>
                     <div className="help-contact">
-                      <p>Need help? Talk to an expert</p>
-                      <a href="tel:+8921231129999">+892 (123) 112 - 9999</a>
+                      <p>Need help? Talk to us</p>
+                      <a href="tel:5037475544">503-747-5544</a>
                     </div>
                   </div>
                 </div>
@@ -97,45 +95,6 @@ const ServiceDetails = () => {
                 />
                 <h3 className="mt-4">Service Overview</h3>
                 <p>{service.description}</p>
-                <p>
-                  We provide high-quality care and services to ensure the
-                  well-being and comfort of our clients.
-                </p>
-
-                {/* Additional Service Information */}
-                <div className="innerpage mt-25">
-                  <h3>Frequently Asked Questions</h3>
-                  <ul className="accordion-box">
-                    <li className="accordion block">
-                      <div className="acc-btn">
-                        Is my technology allowed on tech?
-                        <div className="icon fa fa-plus"></div>
-                      </div>
-                      <div className="acc-content">
-                        <div className="content">
-                          <p>
-                            There are many variations of passages, and the
-                            majority have suffered alterations.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="accordion block active-block">
-                      <div className="acc-btn active">
-                        How to soft launch your business?
-                        <div className="icon fa fa-plus"></div>
-                      </div>
-                      <div className="acc-content current">
-                        <div className="content">
-                          <p>
-                            There are many variations of passages, and the
-                            majority have suffered alterations.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
 
                 {/* Feature Images */}
                 <div className="feature-list mt-4">
@@ -148,10 +107,6 @@ const ServiceDetails = () => {
                         width={350}
                         height={250}
                       />
-                      <p>
-                        Our services are designed to provide the best care and
-                        attention to our clients.
-                      </p>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12 column">
                       <Image
@@ -161,21 +116,12 @@ const ServiceDetails = () => {
                         width={350}
                         height={250}
                       />
-                      <p>
-                        We ensure our facilities and staff provide a
-                        comfortable, safe environment.
-                      </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Additional Text */}
                 <div className="content mt-40">
-                  <h3>Service Center</h3>
-                  <p>
-                    We are committed to providing high-quality services to
-                    ensure your comfort and well-being.
-                  </p>
                   <blockquote className="blockquote-one">
                     "Providing quality care with passion and dedication."
                   </blockquote>

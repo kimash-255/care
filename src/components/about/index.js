@@ -17,23 +17,25 @@ const About = () => {
                   Creating a warm and caring environment for seniors
                 </h2>
                 <div className="text">
-                  At Warm Touch Homes, we are dedicated to enhancing the lives
-                  of seniors by providing compassionate, high-quality care in a
-                  comfortable and supportive setting. Our goal is to create a
-                  community where seniors feel valued, engaged, and well cared
-                  for. With personalized services and a family-like atmosphere,
-                  we ensure that every resident enjoys their golden years with
-                  dignity and joy.
+                  Adult foster home is a wonderful option for seniors who need
+                  assistance with daily activities like managing medications,
+                  dressing, bathing, housekeeping and meals. We also often have
+                  programs and team members in place who can provide support
+                  with recreational activities and transportation. It's a
+                  redefined independence that gives you more time to pursue your
+                  hobbies, enjoy fun social events and make new friends. Our
+                  Adult Foster Home has trained staff on-site 24 hours a day,
+                  seven days a week, to be alerted to an emergency.
                 </div>
               </div>
 
               <ul className="list-style-home3">
-                <li>Personalized Care Plans</li>
-                <li>Wellness & Nutrition Programs</li>
-                <li>Engaging Social Activities</li>
-                <li>On-Site Medical Support</li>
-                <li>Compassionate and Skilled Caregivers</li>
-                <li>A Safe & Comfortable Living Environment</li>
+                <li>24/7 On-Site Trained Staff</li>
+                <li>Medication Management</li>
+                <li>Personal Care Assistance</li>
+                <li>Housekeeping & Meals</li>
+                <li>Recreational Activities</li>
+                <li>Transportation Support</li>
               </ul>
 
               <div className="btn-box d-sm-flex align-items-center">

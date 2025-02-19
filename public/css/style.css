@@ -2711,7 +2711,7 @@ Header Style One
   position: relative;
 }
 .main-header.header-style-three .header-top .inner-container {
-  background-color: #121923;
+  background-color: ##00008b;
   padding-bottom: 6px;
   padding-left: 220px;
   padding-right: 40px;
@@ -2784,7 +2784,7 @@ Header Style One
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #121923;
+  background-color: ##00008b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
