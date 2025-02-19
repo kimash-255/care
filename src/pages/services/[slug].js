@@ -119,13 +119,6 @@ const ServiceDetails = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Additional Text */}
-                <div className="content mt-40">
-                  <blockquote className="blockquote-one">
-                    "Providing quality care with passion and dedication."
-                  </blockquote>
-                </div>
               </div>
             </div>
           </div>
