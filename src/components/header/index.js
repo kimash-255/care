@@ -199,7 +199,7 @@ const Header = () => {
           </ul>
 
           {/* Contact Section in Mobile Menu */}
-          <ul className="contact-list-one">
+          {/* <ul className="contact-list-one">
             <li>
               <div className="contact-info-box">
                 <i className="fa fa-phone"></i>
@@ -214,7 +214,7 @@ const Header = () => {
                 </a>
               </div>
             </li>
-          </ul>
+          </ul> */}
 
           <ul className="social-links">
             <li>
@@ -272,35 +272,24 @@ const Header = () => {
       </div>
 
       <style jsx>{`
-        .fixed-header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: white;
-          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-          z-index: 1000;
-          transition: all 0.3s ease-in-out;
-        }
-        .contact-list-one {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          padding: 10px 0;
-        }
-        .contact-info-box {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 16px;
-        }
-        .contact-info-box i {
-          font-size: 18px;
-        }
-        .contact-list-one li {
-          text-align: left; /* Aligns items to the left */
-          width: 100%;
-          padding-left: 15px;
+        @media (max-width: 768px) {
+          .header-top,
+          .header-lower {
+            display: none; /* Hides the regular header on mobile */
+          }
+
+          .sticky-header {
+            display: flex !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+            padding: 10px 0;
+          }
         }
       `}</style>
     </header>

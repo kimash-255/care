@@ -18,9 +18,9 @@ const Service = () => {
             <div class="inner-box">
               <div class="image-box">
                 <figure class="image">
-                  <a href="page-service-details.html">
+                  <Link href="page-service-details.html">
                     <img src="images/resource/service-1.jpg" alt="" />
-                  </a>
+                  </Link>
                 </figure>
                 <div class="icon-box">
                   <i class="icon flaticon-oldkare-chat"></i>
@@ -28,15 +28,15 @@ const Service = () => {
               </div>
               <div class="content-box">
                 <h5 class="title">
-                  <a href="page-service-details.html">Medical Checkup</a>
+                  <Link href="page-service-details.html">Medical Checkup</Link>
                 </h5>
                 <div class="text">
                   consetetur sadipscing elitr the sed arer diam nonumy eirmod
                   tempor
                 </div>
-                <a href="page-service-details.html" class="read-more">
+                <Link href="page-service-details.html" class="read-more">
                   read More <i class="fa fa-long-arrow-alt-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -48,9 +48,9 @@ const Service = () => {
             <div class="inner-box">
               <div class="image-box">
                 <figure class="image">
-                  <a href="page-service-details.html">
+                  <Link href="page-service-details.html">
                     <img src="images/resource/service-2.jpg" alt="" />
-                  </a>
+                  </Link>
                 </figure>
                 <div class="icon-box">
                   <i class="icon flaticon-oldkare-healthcare"></i>
@@ -58,15 +58,15 @@ const Service = () => {
               </div>
               <div class="content-box">
                 <h5 class="title">
-                  <a href="page-service-details.html">Senior Citizen</a>
+                  <Link href="page-service-details.html">Senior Citizen </Link>
                 </h5>
                 <div class="text">
                   consetetur sadipscing elitr the sed arer diam nonumy eirmod
                   tempor
                 </div>
-                <a href="page-service-details.html" class="read-more">
+                <Link href="page-service-details.html" class="read-more">
                   read More <i class="fa fa-long-arrow-alt-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -78,9 +78,9 @@ const Service = () => {
             <div class="inner-box">
               <div class="image-box">
                 <figure class="image">
-                  <a href="page-service-details.html">
+                  <Link href="page-service-details.html">
                     <img src="images/resource/service-3.jpg" alt="" />
-                  </a>
+                  </Link>
                 </figure>
                 <div class="icon-box">
                   <i class="icon flaticon-oldkare-gardening"></i>
@@ -88,15 +88,15 @@ const Service = () => {
               </div>
               <div class="content-box">
                 <h5 class="title">
-                  <a href="page-service-details.html">Health & Medical Care</a>
+                  <Link href="page-service-details.html">Health & Medical Care</Link>
                 </h5>
                 <div class="text">
                   consetetur sadipscing elitr the sed arer diam nonumy eirmod
                   tempor
                 </div>
-                <a href="page-service-details.html" class="read-more">
+                <Link href="/services" class="read-more">
                   read More <i class="fa fa-long-arrow-alt-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -108,9 +108,9 @@ const Service = () => {
                 Find The Main Senior Care Service
                 <span class="color3 ps-2">Send a request now</span>
               </p>
-              <a href="page-contact.html" class="theme-btn btn-style-two small">
+              <Link href="/contact" class="theme-btn btn-style-two small">
                 <span class="btn-title">Discover More</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
