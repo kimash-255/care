@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import servicesData from "@/data/servicesdata";
 
 const Header = () => {
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuVisible(!isMobileMenuVisible);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header
@@ -90,7 +106,7 @@ const Header = () => {
                     <Link href="/about">About</Link>
                   </li>
                   <li className="dropdown">
-                    <Link href="#">Services</Link>
+                    <Link href="/services">Services</Link>
                     <ul>
                       {servicesData.map((service) => (
                         <li key={service.id}>
@@ -138,28 +154,63 @@ const Header = () => {
             </div>
           </div>
 
+          {/* Mobile Navigation */}
+          <ul className="navigation">
+            <li>
+              <Link href="/" onClick={toggleMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" onClick={toggleMobileMenu}>
+                About
+              </Link>
+            </li>
+            <li className="dropdown">
+              <Link href="/services" onClick={toggleMobileMenu}>
+                Services
+              </Link>
+              <ul>
+                {servicesData.map((service) => (
+                  <li key={service.id}>
+                    <Link
+                      href={`/services/${service.title
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")}`}
+                      onClick={toggleMobileMenu}
+                    >
+                      {service.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li>
+              <Link href="/gallery" onClick={toggleMobileMenu}>
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" onClick={toggleMobileMenu}>
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+
+          {/* Contact Section in Mobile Menu */}
           <ul className="contact-list-one">
             <li>
               <div className="contact-info-box">
-                <i className="lnr-icon-phone-handset"></i>
-                <span className="title">Call Now</span>
+                <i className="fa fa-phone"></i>
                 <a href="tel:5037475544">503-747-5544</a>
               </div>
             </li>
             <li>
               <div className="contact-info-box">
-                <i className="lnr-icon-envelope1"></i>
-                <span className="title">Send Email</span>
+                <i className="fa fa-envelope"></i>
                 <a href="mailto:warmtouchhomes@gmail.com">
                   warmtouchhomes@gmail.com
                 </a>
-              </div>
-            </li>
-            <li>
-              <div className="contact-info-box">
-                <i className="lnr-icon-clock"></i>
-                <span className="title">Business Hours</span>
-                Mon - Sat 8:00 - 6:30, Sunday - CLOSED
               </div>
             </li>
           </ul>
@@ -189,35 +240,12 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Search Popup */}
-      <div className="search-popup">
-        <span className="search-back-drop"></span>
-        <button className="close-search">
-          <span className="fa fa-times"></span>
-        </button>
-        <div className="search-inner">
-          <form method="post" action="/">
-            <div className="form-group">
-              <input
-                type="search"
-                name="search-field"
-                placeholder="Search..."
-                required
-              />
-              <button type="submit">
-                <i className="fa fa-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
       {/* Sticky Header */}
-      <div className="sticky-header">
+      <div className={`sticky-header ${isSticky ? "fixed-header" : ""}`}>
         <div className="auto-container">
           <div className="inner-container">
             <div className="logo">
-              <Link href="/" title="">
+              <Link href="/">
                 <Image
                   src="/images/logo-2.png"
                   alt="Oitech"
@@ -239,6 +267,39 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .fixed-header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: white;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          z-index: 1000;
+          transition: all 0.3s ease-in-out;
+        }
+        .contact-list-one {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px 0;
+        }
+        .contact-info-box {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 16px;
+        }
+        .contact-info-box i {
+          font-size: 18px;
+        }
+        .contact-list-one li {
+          text-align: left; /* Aligns items to the left */
+          width: 100%;
+          padding-left: 15px;
+        }
+      `}</style>
     </header>
   );
 };
