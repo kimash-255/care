@@ -1,11 +1,22 @@
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import servicesData from "@/data/servicesdata";
 
 const Header = () => {
+  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuVisible(!isMobileMenuVisible);
+  };
+
   return (
-    <header className="main-header header-style-three">
-      {/* <!-- Header Top --> */}
+    <header
+      className={`main-header header-style-three ${
+        isMobileMenuVisible ? "mobile-menu-visible" : ""
+      }`}
+    >
+      {/* Header Top */}
       <div className="header-top">
         <div className="auto-container">
           <div className="inner-container">
@@ -13,7 +24,7 @@ const Header = () => {
               <ul className="social-icon-one">
                 <li>
                   <a href="#">
-                    <span className="fa fa-x"></span>
+                    <span className="fab fa-x-twitter"></span>
                   </a>
                 </li>
                 <li>
@@ -35,28 +46,26 @@ const Header = () => {
             </div>
 
             <div className="top-right">
-              {/* <!-- Info List --> */}
               <ul className="list-style-one">
                 <li>
-                  <i className="fa fa-envelope"></i>
+                  <i className="fa fa-envelope"></i>{" "}
                   <a href="mailto:warmtouchhomes@gmail.com">
                     warmtouchhomes@gmail.com
                   </a>
                 </li>
                 <li>
-                  <i className="fa fa-map-marker"></i> 503-747-5544
+                  <i className="fa fa-phone"></i>{" "}
+                  <a href="tel:5037475544">503-747-5544</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      {/* <!-- Header Top --> */}
 
-      {/* <!-- Header Lower --> */}
+      {/* Header Lower */}
       <div className="header-lower">
         <div className="auto-container">
-          {/* <!-- Main box --> */}
           <div className="main-box">
             <div className="logo-box">
               <div className="logo">
@@ -71,7 +80,6 @@ const Header = () => {
               </div>
             </div>
 
-            {/* <!--Nav Box--> */}
             <div className="nav-outer">
               <nav className="nav main-menu">
                 <ul className="navigation">
@@ -81,7 +89,6 @@ const Header = () => {
                   <li>
                     <Link href="/about">About</Link>
                   </li>
-
                   <li className="dropdown">
                     <Link href="#">Services</Link>
                     <ul>
@@ -98,29 +105,22 @@ const Header = () => {
                       ))}
                     </ul>
                   </li>
-
-                  {/* Added Gallery Link */}
                   <li>
                     <Link href="/gallery">Gallery</Link>
                   </li>
-
                   <li>
                     <Link href="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </nav>
-              {/* <!-- Main Menu End--> */}
             </div>
           </div>
         </div>
       </div>
-      {/* <!-- End Header Lower --> */}
 
-      {/* <!-- Mobile Menu  --> */}
-      <div className="mobile-menu">
-        <div className="menu-backdrop"></div>
-
-        {/* <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> */}
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${isMobileMenuVisible ? "active" : ""}`}>
+        <div className="menu-backdrop" onClick={toggleMobileMenu}></div>
         <nav className="menu-box">
           <div className="upper-box">
             <div className="nav-logo">
@@ -133,27 +133,22 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <div className="close-btn">
-              <i className="icon fa fa-times"></i>
+            <div className="close-btn" onClick={toggleMobileMenu}>
+              <i className="fa fa-times"></i>
             </div>
           </div>
 
-          <ul className="navigation clearfix">
-            {/* <!--Keep This Empty / Menu will come through Javascript--> */}
-          </ul>
           <ul className="contact-list-one">
             <li>
-              {/* <!-- Contact Info Box --> */}
               <div className="contact-info-box">
-                <i className="icon lnr-icon-phone-handset"></i>
+                <i className="lnr-icon-phone-handset"></i>
                 <span className="title">Call Now</span>
                 <a href="tel:5037475544">503-747-5544</a>
               </div>
             </li>
             <li>
-              {/* <!-- Contact Info Box --> */}
               <div className="contact-info-box">
-                <span className="icon lnr-icon-envelope1"></span>
+                <i className="lnr-icon-envelope1"></i>
                 <span className="title">Send Email</span>
                 <a href="mailto:warmtouchhomes@gmail.com">
                   warmtouchhomes@gmail.com
@@ -161,9 +156,8 @@ const Header = () => {
               </div>
             </li>
             <li>
-              {/* <!-- Contact Info Box --> */}
               <div className="contact-info-box">
-                <span className="icon lnr-icon-clock"></span>
+                <i className="lnr-icon-clock"></i>
                 <span className="title">Business Hours</span>
                 Mon - Sat 8:00 - 6:30, Sunday - CLOSED
               </div>
@@ -173,7 +167,7 @@ const Header = () => {
           <ul className="social-links">
             <li>
               <a href="#">
-                <i className="fa fa-x"></i>
+                <i className="fab fa-x-twitter"></i>
               </a>
             </li>
             <li>
@@ -194,15 +188,13 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      {/* <!-- End Mobile Menu --> */}
 
-      {/* <!-- Header Search --> */}
+      {/* Search Popup */}
       <div className="search-popup">
         <span className="search-back-drop"></span>
         <button className="close-search">
           <span className="fa fa-times"></span>
         </button>
-
         <div className="search-inner">
           <form method="post" action="/">
             <div className="form-group">
@@ -219,13 +211,11 @@ const Header = () => {
           </form>
         </div>
       </div>
-      {/* <!-- End Header Search --> */}
 
-      {/* <!-- Sticky Header  --> */}
+      {/* Sticky Header */}
       <div className="sticky-header">
         <div className="auto-container">
           <div className="inner-container">
-            {/* <!--Logo--> */}
             <div className="logo">
               <Link href="/" title="">
                 <Image
@@ -236,28 +226,19 @@ const Header = () => {
                 />
               </Link>
             </div>
-
-            {/* <!--Right Col--> */}
             <div className="nav-outer">
-              {/* <!-- Main Menu --> */}
               <nav className="main-menu">
                 <div className="navbar-collapse show collapse clearfix">
-                  <ul className="navigation clearfix">
-                    {/* <!--Keep This Empty / Menu will come through Javascript--> */}
-                  </ul>
+                  <ul className="navigation clearfix"></ul>
                 </div>
               </nav>
-              {/* <!-- Main Menu End--> */}
-
-              {/* <!--Mobile Navigation Toggler--> */}
-              <div className="mobile-nav-toggler">
-                <span className="icon lnr-icon-bars"></span>
+              <div className="mobile-nav-toggler" onClick={toggleMobileMenu}>
+                <span className="lnr-icon-bars"></span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <!-- End Sticky Menu --> */}
     </header>
   );
 };
