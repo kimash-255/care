@@ -144,18 +144,18 @@ const Contact = () => {
                 </div>
                 <ul className="list-unstyled contact-details__info">
                   <li>
-                    <div className="icon">
+                    {/* <div className="icon">
                       <span className="lnr-icon-phone-plus"></span>
-                    </div>
+                    </div> */}
                     <div className="text">
                       <h6 className="mb-1">Call us</h6>
                       <a href="tel:+15037475544">503-747-5544</a>
                     </div>
                   </li>
                   <li>
-                    <div className="icon">
+                    {/* <div className="icon">
                       <span className="lnr-icon-envelope1"></span>
-                    </div>
+                    </div> */}
                     <div className="text">
                       <h6 className="mb-1">Email us</h6>
                       <a href="mailto:warmtouchhomes@gmail.com">
@@ -164,9 +164,9 @@ const Contact = () => {
                     </div>
                   </li>
                   <li>
-                    <div className="icon">
+                    {/* <div className="icon">
                       <span className="lnr-icon-location"></span>
-                    </div>
+                    </div> */}
                     <div className="text">
                       <h6 className="mb-1">Visit us</h6>
                       <span>
