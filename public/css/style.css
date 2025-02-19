@@ -13628,7 +13628,7 @@ Sidebar
 ***/
 .main-footer {
   background-color: #343248;
-  background-image: url(../images/background/bg-1.png);
+  /* background-image: url(../images/background/bg-1.png); */
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;

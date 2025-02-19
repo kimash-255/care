@@ -4,55 +4,12 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="main-footer">
-      <div
+      {/* <div
         className="bg bg-image"
         style={{ backgroundImage: "url(/images/background/bg-1.png)" }}
-      ></div>
+      ></div> */}
 
       {/* Upper Box */}
-      <div className="auto-container">
-        <div className="upper-box">
-          <div className="row">
-            <div className="contact-info logo-box col-lg-4 wow fadeInUp text-center">
-              <div className="logo">
-                <Link href="/">
-                  <Image
-                    src="/images/logo.png"
-                    alt="Logo"
-                    width={80}
-                    height={80}
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                    }}
-                  />
-                </Link>
-              </div>
-              <p className="motto">Where care meets comfort</p>
-            </div>
-
-            <div className="contact-info col-lg-4 wow fadeInRight">
-              <div className="inner-box">
-                <h4 className="title">Send Email</h4>
-                <div className="text">
-                  <a href="mailto:warmtouchhomes@gmail.com">
-                    warmtouchhomes@gmail.com
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="contact-info col-lg-4 wow fadeInLeft">
-              <div className="inner-box">
-                <h4 className="title">Call Now</h4>
-                <div className="text">
-                  <a href="tel:5037475544">503-747-5544</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Widgets Section */}
       <div className="widgets-section">
