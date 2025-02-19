@@ -45,17 +45,6 @@ const About = () => {
                 >
                   <span className="btn-title">Discover More</span>
                 </Link>
-                <div className="founder-info d-flex align-items-center ml-50 ml-sm--0">
-                  <div className="thumb mr-20">
-                    <Image
-                      className="rounded-circle"
-                      src="/images/resource/thumb-1.jpg"
-                      alt="Founder"
-                      width={60}
-                      height={60}
-                    />
-                  </div>
-                </div>
               </div>
             </div>
           </div>
