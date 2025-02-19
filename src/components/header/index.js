@@ -84,13 +84,14 @@ const Header = () => {
         <div className="auto-container">
           <div className="main-box">
             <div className="logo-box">
-              <div className="logo">
+              <div className="logo bg-white p-2 rounded-lg">
                 <Link href="/">
                   <Image
                     src="/images/logo.png"
-                    alt="Oitech"
-                    width={150}
-                    height={50}
+                    alt="Warm Touch Homes Logo"
+                    width={160}
+                    height={160}
+                    priority
                   />
                 </Link>
               </div>
@@ -244,16 +245,18 @@ const Header = () => {
       <div className={`sticky-header ${isSticky ? "fixed-header" : ""}`}>
         <div className="auto-container">
           <div className="inner-container">
-            <div className="logo">
+            <div className="logo bg-white p-2 rounded-lg">
               <Link href="/">
                 <Image
                   src="/images/logo-2.png"
-                  alt="Oitech"
-                  width={150}
-                  height={50}
+                  alt="Warm Touch Homes Logo"
+                  width={100}
+                  height={100}
+                  priority
                 />
               </Link>
             </div>
+
             <div className="nav-outer">
               <nav className="main-menu">
                 <div className="navbar-collapse show collapse clearfix">
