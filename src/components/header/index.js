@@ -146,7 +146,7 @@ const Header = () => {
                   src="/images/logo.png"
                   alt="Oitech"
                   width={150}
-                  height={50}
+                  height={150}
                 />
               </Link>
             </div>
@@ -250,8 +250,8 @@ const Header = () => {
                 <Image
                   src="/images/logo-2.png"
                   alt="Warm Touch Homes Logo"
-                  width={100}
-                  height={100}
+                  width={150}
+                  height={150}
                   priority
                 />
               </Link>
