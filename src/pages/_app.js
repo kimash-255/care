@@ -53,37 +53,44 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Destiny Care Home</title>
+        <title>Warm Touch Homes - Quality Senior Care Services</title>
         <meta
           name="description"
-          content="Providing the best care and support at Destiny Care Home."
+          content="Experience exceptional senior care in a comfortable, home-like environment at Warm Touch Homes. Professional and compassionate care services."
         />
         <meta
           name="keywords"
-          content="care home, elderly care, assisted living, Destiny Care Home"
+          content="senior care, elderly care, assisted living, home care, Portland care home, Warm Touch Homes"
         />
-        <meta name="author" content="Destiny Care Home" />
+        <meta name="author" content="Warm Touch Homes" />
         <meta name="theme-color" content="#ffffff" />
 
         {/* Favicon */}
         <link
           rel="icon"
-          href="https://www.destinycarehome.org/assets/img/service/01.jpg"
+          href="https://warm-touch.mslabdesigns.com/images/logo.png"
         />
 
-        {/* Open Graph Meta Tags (for link sharing previews) */}
-        <meta property="og:title" content="Destiny Care Home" />
+        {/* Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Warm Touch Homes - Quality Senior Care Services"
+        />
         <meta
           property="og:description"
-          content="Providing the best care and support at Destiny Care Home."
+          content="Experience exceptional senior care in a comfortable, home-like environment at Warm Touch Homes."
         />
         <meta
           property="og:image"
-          content="https://www.destinycarehome.org/assets/img/service/01.jpg"
+          content="https://warm-touch.mslabdesigns.com/images/logo.png"
         />
-        <meta property="og:image:alt" content="Destiny Care Home Logo" />
+        <meta property="og:image:alt" content="Warm Touch Homes Logo" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.destinycarehome.org/" />
+        <meta
+          property="og:url"
+          content="https://warm-touch.mslabdesigns.com/"
+        />
+        <meta property="og:site_name" content="Warm Touch Homes" />
 
         {/* Viewport Settings */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -91,6 +98,9 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
         />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://warm-touch.mslabdesigns.com/" />
       </Head>
 
       {/* Render content directly, avoid showing a loader */}
