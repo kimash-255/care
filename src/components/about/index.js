@@ -55,12 +55,6 @@ const About = () => {
                       height={60}
                     />
                   </div>
-                  <div>
-                    <h6 className="name mb-0">Jessica Brown</h6>
-                    <span className="designation">
-                      Founder of Warm Touch Homes
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
