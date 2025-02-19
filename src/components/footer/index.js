@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="main-footer">
       <div
         className="bg bg-image"
-        style={{ backgroundImage: "url(./images/background/bg-1.png)" }}
+        style={{ backgroundImage: "url(/images/background/bg-1.png)" }}
       ></div>
 
       {/* Upper Box */}
@@ -15,29 +15,34 @@ const Footer = () => {
           <div className="row">
             <div className="contact-info logo-box col-lg-4 wow fadeInUp text-center">
               <div className="logo">
-                <a href="#">
-                  <img src="/images/logo.png" alt="" />
-                </a>
+                <Link href="/">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Logo"
+                    width={150}
+                    height={50}
+                  />
+                </Link>
               </div>
+              <p className="motto">Where care meets comfort</p>
             </div>
 
             <div className="contact-info col-lg-4 wow fadeInRight">
               <div className="inner-box">
                 <h4 className="title">Send Email</h4>
                 <div className="text">
-                  <a href="mailto:info@example.com">info@example.com</a>
+                  <a href="mailto:warmtouchhomes@gmail.com">
+                    warmtouchhomes@gmail.com
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div
-              className="contact-info col-lg-4 wow fadeInLeft"
-              data-wow-delay="600ms"
-            >
+            <div className="contact-info col-lg-4 wow fadeInLeft">
               <div className="inner-box">
-                <h4 className="title">call now</h4>
+                <h4 className="title">Call Now</h4>
                 <div className="text">
-                  <a href="tel:+924680668800">+ 92 ( 4680 ) 66 - 8800</a>
+                  <a href="tel:5037475544">503-747-5544</a>
                 </div>
               </div>
             </div>
@@ -55,8 +60,8 @@ const Footer = () => {
                   <div className="footer-widget about-widget">
                     <h6 className="widget-title">About</h6>
                     <div className="text">
-                      Welcome to our web design agency. Lorem ipsum simply free
-                      text dolor sited amet cons cing elit.
+                      We provide exceptional home care services, ensuring
+                      comfort & well-being.
                     </div>
                   </div>
                 </div>
@@ -65,16 +70,11 @@ const Footer = () => {
                     <h6 className="widget-title">Explore</h6>
                     <ul className="user-links">
                       <li>
-                        <a href="#">Meet Our Team</a>
+                        <Link href="/services">What We Do</Link>
                       </li>
+
                       <li>
-                        <a href="#">What We Do</a>
-                      </li>
-                      <li>
-                        <a href="#">Latest News</a>
-                      </li>
-                      <li>
-                        <a href="#">Contact</a>
+                        <Link href="/contact">Contact</Link>
                       </li>
                     </ul>
                   </div>
@@ -86,7 +86,7 @@ const Footer = () => {
               <div className="footer-widget contacts-widget">
                 <h6 className="widget-title">Contact</h6>
                 <div className="text">
-                  60 Road, Broklyn Golden Street New York. USA
+                  797 NE Kathryn St, Hillsboro, OR 97124, United States
                 </div>
                 <ul className="social-icon-two">
                   <li>
@@ -119,8 +119,7 @@ const Footer = () => {
                 <div className="widget-content">
                   <div className="subscribe-form">
                     <div className="text">
-                      Subscribe for our upcoming latest articles and news
-                      resources
+                      Subscribe for our latest updates and news.
                     </div>
                     <form method="post" action="#">
                       <div className="form-group">
@@ -128,7 +127,6 @@ const Footer = () => {
                           type="email"
                           name="email"
                           className="email"
-                          value=""
                           placeholder="Email Address"
                           required
                         />
@@ -153,8 +151,8 @@ const Footer = () => {
           <div className="inner-container">
             <div className="copyright-text">
               <p>
-                &copy; Copyright reserved by
-                <a href="index.html">kodesolution.com</a>
+                &copy; {new Date().getFullYear()} Warm Touch Homes. All rights
+                reserved.
               </p>
             </div>
           </div>
