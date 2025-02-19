@@ -74,8 +74,11 @@ const Header = () => {
             <div className="nav-outer">
               <nav className="nav main-menu">
                 <ul className="navigation">
-                  <li className="current dropdown">
+                  <li>
                     <Link href="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link href="/about">About</Link>
                   </li>
 
                   <li className="dropdown">
