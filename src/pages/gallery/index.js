@@ -128,13 +128,13 @@ const GalleryPage = () => {
                     </div>
 
                     {/* Hover Content */}
-                    <div
+                    {/* <div
                       className="hover-content"
                       style={{ cursor: "pointer" }}
                       onClick={() => setSelectedImage(item)}
                     >
                       <h5 className="title">{item.title}</h5>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}

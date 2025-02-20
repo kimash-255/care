@@ -47,8 +47,8 @@ const Testimonial = () => {
             <div className="info-box">
               <i className="icon flaticon-oldkare-love"></i>
               <div className="text">
-                Trusted by <strong>over 2,350 families</strong> who found
-                comfort and care with us.
+                Trusted by <strong>over 100 families</strong> who found comfort
+                and care with us.
               </div>
             </div>
           </div>
