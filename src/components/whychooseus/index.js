@@ -28,10 +28,10 @@ const WhyChooseUs = () => {
                   Exceptional Care with a Personal Touch
                 </h2>
                 <div className="text">
-                  At Warm Touch Homes, we believe in creating a **safe, loving,
+                  At Warm Touch Homes, we believe in creating a safe, loving,
                   and enriching environment** where seniors can thrive. Our
-                  holistic approach to senior living ensures **comfort, dignity,
-                  and joy** for every resident.
+                  holistic approach to senior living ensures comfort, dignity,
+                  and joy for every resident.
                 </div>
               </div>
 
@@ -59,9 +59,9 @@ const WhyChooseUs = () => {
                   </div>
                   <div className="skill-bar">
                     <div className="bar-inner">
-                      <div className="bar progress-line" data-width="95">
+                      <div className="bar progress-line" data-width="100">
                         <div className="skill-percentage">
-                          <span className="count-text">95%</span>
+                          <span className="count-text">100%</span>
                         </div>
                       </div>
                     </div>
@@ -75,9 +75,9 @@ const WhyChooseUs = () => {
                   </div>
                   <div className="skill-bar">
                     <div className="bar-inner">
-                      <div className="bar progress-line" data-width="88">
+                      <div className="bar progress-line" data-width="100">
                         <div className="skill-percentage">
-                          <span className="count-text">88%</span>
+                          <span className="count-text">100%</span>
                         </div>
                       </div>
                     </div>

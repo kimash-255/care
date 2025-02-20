@@ -5687,10 +5687,14 @@ Section Title
 .testimonial-section.home3-style {
   padding-bottom: 150px;
 }
-
 .testimonial-block {
   position: relative;
   padding: 60px 0 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .testimonial-block .inner-box {
   background-color: var(--theme-color-light);
@@ -5700,6 +5704,8 @@ Section Title
   max-width: 500px;
   padding: 30px 50px 45px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 .testimonial-block .inner-box .text {
   font-size: 17px;
@@ -11445,6 +11451,14 @@ Page Title
   background-size: cover;
   padding: 110px 0 110px;
   min-height: 250px;
+}
+.page-title-1 {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 110px 0 110px;
+  min-height: 450px;
 }
 @media only screen and (max-width: 767px) {
   .page-title {
