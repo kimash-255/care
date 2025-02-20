@@ -78,17 +78,6 @@ const GalleryPage = () => {
             </div>
 
             {/* Title Below Image */}
-            <h1
-              className="title"
-              style={{
-                marginTop: "20px", // Space above title
-                marginBottom: "30px", // Space below title (fixes overlap)
-                fontSize: "24px",
-                fontWeight: "bold",
-              }}
-            >
-              {selectedImage.title}
-            </h1>
           </div>
         </section>
       ) : (

@@ -7,6 +7,10 @@ const galleryData = [
   { id: 16, image: "/images/gallery/36.jpg", title: "" },
   { id: 17, image: "/images/gallery/37.jpg", title: "" },
   { id: 18, image: "/images/gallery/38.jpg", title: "" },
+  { id: 18, image: "/images/gallery/39.jpg", title: "" },
+  { id: 18, image: "/images/gallery/40.jpg", title: "" },
+  { id: 18, image: "/images/gallery/41.jpg", title: "" },
+  { id: 18, image: "/images/gallery/42.jpg", title: "" },
 ];
 
 export default galleryData;
