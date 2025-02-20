@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className="col-xl-7 col-lg-6 col-md-6">
                   <div className="footer-widget about-widget">
                     <h6 className="widget-title">About</h6>
-                    <div className="text">
+                    <div className="text-1">
                       We provide exceptional home care services, ensuring
                       comfort & well-being.
                     </div>
@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="footer-column col-xl-3 col-lg-6 col-md-6 col-sm-12">
               <div className="footer-widget contacts-widget">
                 <h6 className="widget-title">Contact</h6>
-                <div className="text">
+                <div className="text-1">
                   797 NE Kathryn St, Hillsboro, OR 97124, United States
                 </div>
                 <ul className="social-icon-two">
@@ -81,7 +81,7 @@ const Footer = () => {
                 <h6 className="widget-title">Newsletter</h6>
                 <div className="widget-content">
                   <div className="subscribe-form">
-                    <div className="text">
+                    <div className="text-1">
                       Subscribe for our latest updates and news.
                     </div>
                     <form method="post" action="#">
@@ -113,7 +113,7 @@ const Footer = () => {
         <div className="auto-container">
           <div className="inner-container">
             <div className="copyright-text">
-              <p>
+              <p className="text-1">
                 &copy; {new Date().getFullYear()} Warm Touch Homes. All rights
                 reserved.
               </p>

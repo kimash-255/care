@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script async src="/js/jquery.js"></script>
         <link href="/css/bootstrap.min.css" rel="stylesheet" />
         <link href="/css/style.css" rel="stylesheet" />
         <link href="/css/responsive.css" rel="stylesheet" />
@@ -20,11 +19,7 @@ export default function Document() {
         <Main />
         <NextScript />
 
-        <script
-          async
-          data-cfasync="false"
-          src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-        ></script>
+        <script async src="/js/jquery.js"></script>
 
         <script async src="/js/popper.min.js"></script>
         <script async src="/js/bootstrap.min.js"></script>
@@ -34,12 +29,12 @@ export default function Document() {
         <script async src="/js/appear.js"></script>
         <script async src="/js/knob.js"></script>
         <script async src="/js/gsap.min.js"></script>
-        <script async src="/js/ScrollTrigger.min.js"></script>
+        {/* <script async src="/js/ScrollTrigger.min.js"></script> */}
         <script async src="/js/SplitText.min.js"></script>
         <script async src="/js/splitType.js"></script>
         <script async src="/js/select2.min.js"></script>
         <script async src="/js/owl.js"></script>
-        <script async src="/js/script.js"></script>
+        {/* <script async src="/js/script.js"></script> */}
         {/* <!-- form submit --> */}
         <script async src="/js/jquery.validate.min.js"></script>
         <script async src="/js/jquery.form.min.js"></script>

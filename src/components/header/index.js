@@ -325,7 +325,7 @@ const Header = () => {
           }
 
           .sticky-header .logo {
-            max-width: 120px;
+            max-width: 10px;
             height: auto;
             padding: 5px 0;
           }

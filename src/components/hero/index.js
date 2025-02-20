@@ -45,7 +45,7 @@ const Hero = () => {
             </div>
             <div className="auto-container text-center">
               <div className="content-box">
-                <h1 className="sub-title animate-1">WARM TOUCH HOMES</h1>
+                <h1 className="title animate-1">WARM TOUCH HOMES</h1>
                 <span className="sub-title animate-1">
                   Where Care and Comfort Meet Together
                 </span>

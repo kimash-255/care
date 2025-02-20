@@ -179,6 +179,14 @@ p,
   line-height: var(--body-line-height);
 }
 
+.text-1 {
+  color: #e5dbdb;
+  font-size: var(--body-font-size);
+  font-family: var(--text-font);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+}
+
 /* -------- Headings ---------- */
 h1,
 h2,
@@ -2877,7 +2885,7 @@ Sticky Header
   padding: 10px 0;
 }
 .sticky-header .logo img {
-  max-height: 40px;
+  /* max-height: 40px; */
 }
 .sticky-header .nav-outer {
   position: relative;
@@ -3754,9 +3762,9 @@ Section Title
 .banner-section-three .content-box .sub-title {
   color: #ffffff;
   display: inline-block;
-  font-size: 50px;
+  font-size: 25px;
   font-weight: 300;
-  line-height: 60px;
+  line-height: 30px;
   margin-bottom: 50px;
   position: relative;
   text-transform: capitalize;
@@ -7248,7 +7256,7 @@ Section Title
   opacity: 0.05;
   position: absolute;
   top: 90px;
-  width: 530px;
+  /* width: 530px; */
   z-index: -1;
 }
 .why-choose-us-two .content-column {
@@ -7918,7 +7926,7 @@ Section Title
   text-align: center;
 }
 .call-to-action .title-box .title {
-  font-size: 60px;
+  font-size: 30px;
   line-height: 1.2em;
   color: #fff;
   margin-bottom: 0;
