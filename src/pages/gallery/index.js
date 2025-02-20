@@ -27,11 +27,11 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* If an image is selected, show it alone */}
+      {/* If an image is selected, show it alone (unchanged display styles) */}
       {selectedImage ? (
         <section
           className="full-image-section"
-          style={{ marginTop: "50px", marginBottom: "50px" }} // Margin Top & Bottom
+          style={{ marginTop: "50px", marginBottom: "50px" }}
         >
           <div
             className="auto-container"
@@ -44,7 +44,6 @@ const GalleryPage = () => {
               textAlign: "center",
             }}
           >
-            {/* Back to Gallery Link (Top, Black Text) */}
             <div style={{ marginBottom: "20px" }}>
               <span
                 onClick={() => setSelectedImage(null)}
@@ -52,7 +51,7 @@ const GalleryPage = () => {
                   cursor: "pointer",
                   fontSize: "16px",
                   fontWeight: "500",
-                  color: "#000", // Black color
+                  color: "#000",
                   textDecoration: "none",
                 }}
               >
@@ -60,7 +59,6 @@ const GalleryPage = () => {
               </span>
             </div>
 
-            {/* Full Image */}
             <div className="full-image-box">
               <Image
                 src={selectedImage.image}
@@ -71,13 +69,9 @@ const GalleryPage = () => {
                   maxWidth: "90%",
                   maxHeight: "70vh",
                   objectFit: "contain",
-                  borderRadius: "10px",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
                 }}
               />
             </div>
-
-            {/* Title Below Image */}
           </div>
         </section>
       ) : (
@@ -88,42 +82,27 @@ const GalleryPage = () => {
               {galleryData.map((item) => (
                 <div
                   key={item.id}
-                  className="service-block-two col-lg-3 col-md-6 wow fadeInUp"
+                  className="service-block-two col-lg-3 col-md-6"
+                  style={{ marginBottom: "20px" }}
                 >
                   <div className="inner-box">
-                    {/* Clickable Image */}
                     <div
                       className="image-box"
                       onClick={() => setSelectedImage(item)}
-                      style={{ cursor: "pointer" }}
+                      style={{
+                        cursor: "pointer",
+                        position: "relative",
+                        width: "100%",
+                        height: "250px",
+                      }}
                     >
-                      <figure className="image">
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          layout="fill"
-                          objectFit="cover"
-                        />
-                      </figure>
+                      <Image
+                        src={item.image}
+                        layout="fill"
+                        objectFit="cover"
+                        alt={item.title}
+                      />
                     </div>
-
-                    {/* Clickable Title */}
-                    <div
-                      className="content-box"
-                      style={{ textAlign: "center", cursor: "pointer" }}
-                      onClick={() => setSelectedImage(item)}
-                    >
-                      <h5 className="title">{item.title}</h5>
-                    </div>
-
-                    {/* Hover Content */}
-                    {/* <div
-                      className="hover-content"
-                      style={{ cursor: "pointer" }}
-                      onClick={() => setSelectedImage(item)}
-                    >
-                      <h5 className="title">{item.title}</h5>
-                    </div> */}
                   </div>
                 </div>
               ))}
