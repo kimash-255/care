@@ -44,7 +44,7 @@ const Header = () => {
       }`}
     >
       {/* Header Top */}
-      <div className="header-top">
+      {/* <div className="header-top">
         <div className="auto-container">
           <div className="inner-container">
             <div className="top-left">
@@ -88,7 +88,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Header Lower */}
       <div className="header-lower">
