@@ -146,4 +146,22 @@ const GalleryPage = () => {
   );
 };
 
+// Pass SEO data as JSON-serializable props
+export async function getStaticProps() {
+  return {
+    props: {
+      seoData: {
+        title: "Senior Living Gallery | Warm Touch Homes",
+        description:
+          "Explore Warm Touch Homes through our gallery. See our comfortable, home-like environment where seniors receive exceptional care and enjoy daily activities.",
+        keywords:
+          "Warm Touch Homes, senior care, gallery, senior living, Hillsboro",
+        url: "https://warmtouchhomes.org/gallery",
+        image: "https://warmtouchhomes.org/images/warmtouchhomes-gallery.jpg", // Replace with an actual image URL
+        type: "website",
+      },
+    },
+  };
+}
+
 export default GalleryPage;

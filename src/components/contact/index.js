@@ -5,7 +5,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    phone: "",
     message: "",
   });
 
@@ -29,7 +29,7 @@ const Contact = () => {
       const data = await res.json();
       if (data.success) {
         setStatus({ type: "success", message: "Email sent successfully!" });
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
         throw new Error(data.message);
       }
@@ -100,11 +100,11 @@ const Contact = () => {
                 </div>
                 <div className="mb-3">
                   <input
-                    name="subject"
+                    name="phone"
                     className="form-control"
                     type="text"
-                    placeholder="Enter Subject"
-                    value={formData.subject}
+                    placeholder="Enter phone"
+                    value={formData.phone}
                     onChange={handleChange}
                     required
                   />
