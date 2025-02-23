@@ -30,4 +30,22 @@ const AboutPage = () => {
   );
 };
 
+// Pass SEO data as JSON-serializable props
+export async function getStaticProps() {
+  return {
+    props: {
+      seoData: {
+        title: "About Warm Touch Homes | Compassionate Senior Care",
+        description:
+          "Learn about Warm Touch Homes, dedicated to providing seniors with personalized care, comfort, and a warm, supportive environment for independent living.",
+        keywords:
+          "Warm Touch Homes, senior care, personalized care, independent living, supportive environment",
+        url: "https://warmtouchhomes.org/about",
+        image: "https://warmtouchhomes.org/images/warmtouchhomes-about.jpg", // Replace with an actual image URL
+        type: "website",
+      },
+    },
+  };
+}
+
 export default AboutPage;

@@ -27,4 +27,22 @@ const ServicesPage = () => {
   );
 };
 
+// Pass SEO data as JSON-serializable props
+export async function getStaticProps() {
+  return {
+    props: {
+      seoData: {
+        title: "Elderly Care Services | Warm Touch Homes",
+        description:
+          "Discover Warm Touch Homes’ elderly care services, including personal care, nutrition, medication management, relaxation activities, and transportation support.",
+        keywords:
+          "Warm Touch Homes, elderly care, personal care, nutrition, medication management, relaxation activities, transportation support",
+        url: "https://warmtouchhomes.org/services",
+        image: "https://warmtouchhomes.org/images/warmtouchhomes-services.jpg", // Replace with an actual image URL
+        type: "website",
+      },
+    },
+  };
+}
+
 export default ServicesPage;
